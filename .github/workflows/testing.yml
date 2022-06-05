@@ -1,0 +1,33 @@
+# .github/workflows/testing.yml
+name: PyTest
+
+on : push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Caching
+        uses: actions/cache@v2
+        with:
+          path: $/{/{ env.pythonLocation /}/}         
+          key: $/{/{ env.pythonLocation /}/}-$/{/{ hashFiles('setup.py') /}/}-$/{/{ hashFiles('requirements.txt') /}/}
+      
+      - name: Install dependencies
+        run: python3 -m pip install -e ".[test]" --no-cache-dir
+      - name: Execute tests
+        run: pytest tests/test.py
+
+
+
+
