@@ -1,0 +1,54 @@
+raw_data_config:
+  raw_data_csv: "3c.csv"
+  model_var: ['pelvic_incidence', 'pelvic_tilt', 'lumbar_lordosis_angle','sacral_slope', 'pelvic_radius', 'degree_spondylolisthesis','class']
+  train_test_split_ratio: 0.2
+  target: "class"
+  random_state: 111
+  new_train_data_csv: data/raw/train_new.csv
+
+processed_data_config:
+  train_data_csv: "column_train.csv"
+  test_data_csv:  "column_test.csv"
+
+model_choice:
+  #DecisionTreeClassifier, random_forest or knn
+  #model: 'DecisionTreeClassifier'
+  model: 'random_forest'
+  #model: 'knn'
+
+
+DecisionTreeClassifier:
+  criterion: "entropy"
+  max_depth: 50
+
+random_forest:
+  criterion: "gini"
+  max_depth: 15
+  n_estimators: 200
+
+knn:
+  n_neighbors: 5
+
+mlflow_global_config:
+  artifacts_dir: artifacts
+  experiment_name: ML_model_final
+  registered_model_name: column_model
+  remote_server_uri: http://localhost:5000
+
+mlflow_random_forest_config:
+  run_name: random_forest
+
+
+mlflow_knn_config:
+  run_name: knn
+
+mlflow_DecisionTreeClassifier_config:
+  run_name: DecisionTreeClassifier
+
+model_dir: models/model.joblib
+
+model_webapp_dir: webapp/model_webapp_dir/model.joblib
+
+model_monitor:
+  target_col_name: target
+  monitor_dashboard_html: reports/data_and_target_drift_dashboard.html

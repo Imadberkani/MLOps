@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Vertebral column Prediction
+{% endblock title %}
+
+
+{% block custom_css %}
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock custom_css %}
+
+
+{% block body %}
+<!-- nav bar -->
+
+<nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">Vertebral column Prediction Model</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div>
+    <!-- nav bar ends -->
+
+    <div class="container-fluid masthead">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form method="POST">
+                        <!-- Input block-->
+                        <div class="form-group">
+                            <label for="translation">
+                                <blockquote class="blockquote">
+                                    <p class="mb-2">Entrer les valeurs de chaque variable :</p>
+                                </blockquote>
+                            </label>
+                            <textarea class="form-control" name="pelvic_incidence" rows="1"
+                                placeholder="pelvic_incidence"></textarea>
+                            <textarea class="form-control" name="pelvic_tilt" rows="1"
+                                placeholder="pelvic_tilt"></textarea>
+                            <textarea class="form-control" name="lumbar_lordosis_angle" rows="1"
+                                placeholder="lumbar_lordosis_angle"></textarea>
+                            <textarea class="form-control" name="sacral_slope" rows="1"
+                                placeholder="sacral_slope"></textarea>
+                            <textarea class="form-control" name="pelvic_radius" rows="1"
+                                placeholder="pelvic_radius"></textarea>
+                            <textarea class="form-control" name="degree_spondylolisthesis" rows="1"
+                                placeholder="degree_spondylolisthesis"></textarea>
+                        </div>
+
+                        <!-- Select output language here. -->
+                        <div class="form-group">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Predict</button></br>
+                        </br>
+                    </form>
+                    <!-- Translated text returned by the Translate API is rendered here. -->
+                </div>
+                <div class="col">
+                    <form>
+                        <div class="form-group">
+                            <label for="translation-result">
+
+                                <blockquote class="blockquote">
+                                    <p class="mb-2">Prediction:</p>
+                                </blockquote>
+
+                            </label>
+                            <textarea readonly class="form-control" id="exTextarea" rows="3">{{ response }}</textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {% endblock body %}
+
+        {% block custom_js %}
+        <!-- Custom JS -->
+        <script src="{{ url_for('static', filename='script/index.js') }}"></script>
+        {% endblock custom_js %}

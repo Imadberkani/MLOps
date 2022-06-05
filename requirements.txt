@@ -1,0 +1,12 @@
+numpy
+pandas
+sklearn==0.24.2
+yaml
+argparse
+mlflow
+black
+isort
+flask
+pytest
+evidently
+gunicorn
