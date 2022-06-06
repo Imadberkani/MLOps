@@ -1,5 +1,4 @@
 numpy
-setuptools==60.0.0
 pandas
 sklearn
 yaml
