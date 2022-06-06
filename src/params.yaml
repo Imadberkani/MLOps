@@ -4,7 +4,7 @@ raw_data_config:
   train_test_split_ratio: 0.2
   target: "class"
   random_state: 111
-  new_train_data_csv: data/raw/train_new.csv
+  new_train_data_csv: column_train.csv
 
 processed_data_config:
   train_data_csv: "column_train.csv"

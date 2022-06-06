@@ -5,7 +5,7 @@ on : push
 
 jobs:
   test:
-    runs-on: [ubuntu-latest, windows-lasted]
+    runs-on: [ubuntu-latest]
 
     steps:
 
