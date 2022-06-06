@@ -22,3 +22,5 @@ def test_get_feat_and_target():
     x, y = get_feat_and_target(df, target)
     assert all([a == b for a, b in zip(x.columns, ["A", "C"])])
     assert all([a == b for a, b in zip(y.columns, ["B"])])
+
+

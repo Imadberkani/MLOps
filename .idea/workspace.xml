@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e78f218b-ac3b-4c47-b7cf-19ce7a9ddee7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ex_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ex_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <recent name="C:\Users\berka\PycharmProjects\TP_Genie_Logiciel\webapp\model_webapp_dir" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.monitoring">
+  <component name="RunManager" selected="Python.s">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP_Genie_Logiciel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="s" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TP_Genie_Logiciel" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/s.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.s" />
         <item itemvalue="Python.monitoring" />
         <item itemvalue="Python tests.Python tests in ex_test.py" />
         <item itemvalue="Python.ex_test" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.train" />
       </list>
     </recent_temporary>
   </component>
