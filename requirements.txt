@@ -1,7 +1,6 @@
 numpy
 pandas
 sklearn
-yaml
 argparse
 mlflow
 black
